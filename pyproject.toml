@@ -1,0 +1,10 @@
+[tool.poetry]
+name = "example_repo"
+version = "0.1"
+description = "Minimal example repo for renovate issue."
+authors = ["Vinicius Taborda"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+

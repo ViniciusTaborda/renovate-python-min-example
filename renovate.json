@@ -2,5 +2,20 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "pyproject.toml"
+      ],
+      "matchStrings": [
+        "\\[tool.poetry.dependencies\\]\npython = \"(?<currentValue>.*)\""
+      ],
+      "depNameTemplate": "python/cpython",
+      "registryUrlTemplate": "https://github.com",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "python"
+    }
   ]
 }
